@@ -19,15 +19,24 @@ h1{text-align:center;color:#3b82f6}
 .bio{background:#1e293b;padding:20px;border-radius:12px;margin:25px 0;border-left:4px solid #3b82f6}
 .bio h2{color:#3b82f6;margin-bottom:10px;font-size:20px}
 
-/* Sabo: Share guda ɗaya + Next Project */
+/* Share + Project */
 .share-top{background:#25D366;padding:12px;border-radius:10px;text-align:center;margin:15px 0;cursor:pointer;font-weight:bold}
 .project{background:linear-gradient(135deg,#1e293b 0%,#334155 100%);padding:20px;border-radius:12px;margin:30px 0;border:2px dashed #3b82f6}
 .project h2{color:#60a5fa;margin-bottom:10px}
+
+/* Sabo: Counter da Comment */
+.counter{text-align:center;background:#ef4444;color:white;padding:8px 16px;border-radius:50px;font-size:14px;font-weight:600;margin-bottom:20px;display:inline-block}
+.comment-box{background:#1e293b;padding:20px;border-radius:12px;margin:30px 0}
+.comment-box input, .comment-box textarea{width:100%;padding:12px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:#e2e8f0;margin:8px 0;font-family:Arial}
+.comment-box button{background:#3b82f6;color:white;border:none;padding:12px;border-radius:8px;cursor:pointer;font-weight:bold;width:100%}
+.comment{padding:12px;background:#0f172a;border-left:3px solid #3b82f6;border-radius:8px;margin:10px 0;font-size:14px}
 </style>
 </head>
 <body>
 
 <div class="hero">
+<!-- Sabo: Counter yana nan sama -->
+<div class="counter">👥 Mutane <span id="count">0</span>+ sun ziyarta</div>
 <img src="aminu.jpg" class="profile-pic" alt="Aminu" onerror="this.src='https://ui-avatars.com/api/?name=Aminu&background=3b82f6&color=fff&size=140'">
 <h1>Aminu - ADUSTECH Wudil</h1>
 </div>
@@ -44,86 +53,4 @@ h1{text-align:center;color:#3b82f6}
 
 <button class="btn" onclick="toggleTips()">Duba Shawarwarina ↓ / View My Tips ↓</button>
 
-<!-- Sabo: Share sau ɗaya kawai -->
-<div class="share-top" onclick="shareAll()">📤 Share Website Ga Abokai Sau Ɗaya</div>
-
-<div style="text-align:center">
-<button class="lang-btn active" onclick="changeLang('ha')">Hausa</button>
-<button class="lang-btn" onclick="changeLang('en')">English</button>
-</div>
-
-<div id="tips" style="display:none;">
-
-<!-- 10 SHAWARWARI HAUSA -->
-<div class="tip tip-ha"><h3>1. Koyi Skill Daya Yadda Ya Kamata</h3><p>Kar ka bi kowane trend. Zabi coding, graphics, video editing, ko writing. Koyi shi har ƙarshe.</p></div>
-<div class="tip tip-ha"><h3>2. Fara Da Abin Da Kake Da Shi</h3><p>Ba dole sai laptop mai ₦500k ba. Wayarka ta isa ka fara. YouTube + Google su ne malamanka.</p></div>
-<div class="tip tip-ha"><h3>3. Gina Network, Ba Kudi Kawai Ba</h3><p>Abokanka na ADUSTECH su ne dukiyarka. Taimaka musu, koyar da su. Network > Money.</p></div>
-<div class="tip tip-ha"><h3>4. Kada Ka Tsaya Wajen Koro</h3><p>Mutane za su ce "ba za ka iya ba". Ka nuna musu da aiki, ba da magana ba.</p></div>
-<div class="tip tip-ha"><h3>5. Koyi Turanci Kadai</h3><p>Turanci kofa ce ta duniya. Kada ka ji kunya. Koyi kowace rana kalma 5.</p></div>
-<div class="tip tip-ha"><h3>6. Ajiye Ƙaramin Kudi</h3><p>Ko ₦50 kowace rana. Bayan wata 1 za ka sami ₦1500. Ƙarami yana tara ya zama babba.</p></div>
-<div class="tip tip-ha"><h3>7. Koyi Yadda Ake Siyarwa</h3><p>Ko kana da skill, sai ka iya sayar da ita. Koyi magana, rubutu, yadda ake gamsar da mutane.</p></div>
-<div class="tip tip-ha"><h3>8. Zama Mai Neman Ilimi</h3><p>Kada ka ce "na gama karatu". Duniya tana canzawa kowace rana. Koyi sabo koyaushe.</p></div>
-<div class="tip tip-ha"><h3>9. Yi Aiki Ba Ko Ta Yaya Ba</h3><p>Idan kana jiran "yanayi ya daidaita" ba za ka fara ba. Fara da rashin kayan aiki.</p></div>
-<div class="tip tip-ha"><h3>10. Ka Yi Amana Da Allah</h3><p>Ka yi aiki, ka yi addu'a. Sauran Allah zai kula. Haƙuri + Aiki = Nasara.</p></div>
-
-<!-- 10 SHAWARWARI ENGLISH -->
-<div class="tip tip-en" style="display:none;"><h3>1. Master One Skill First</h3><p>Don't chase every trend. Pick coding, graphics, video editing, or writing. Master it completely.</p></div>
-<div class="tip tip-en" style="display:none;"><h3>2. Start With What You Have</h3><p>You don't need a ₦500k laptop. Your phone is enough to start. YouTube + Google are your teachers.</p></div>
-<div class="tip tip-en" style="display:none;"><h3>3. Build Network, Not Just Money</h3><p>Your ADUSTECH friends are your wealth. Help them, teach them. Network > Money.</p></div>
-<div class="tip tip-en" style="display:none;"><h3>4. Don't Stop at Criticism</h3><p>People will say "you can't". Show them with work, not words.</p></div>
-<div class="tip tip-en" style="display:none;"><h3>5. Learn English Only</h3><p>English is the key to the world. Don't be shy. Learn 5 words every day.</p></div>
-<div class="tip tip-en" style="display:none;"><h3>6. Save Small Money</h3><p>Even ₦50 daily. After 1 month you'll have ₦1500. Small becomes big.</p></div>
-<div class="tip tip-en" style="display:none;"><h3>7. Learn Sales</h3><p>Even with skill, you must sell it. Learn talking, writing, how to convince people.</p></div>
-<div class="tip tip-en" style="display:none;"><h3>8. Be a Lifelong Learner</h3><p>Don't say "I'm done learning". The world changes daily. Learn something new always.</p></div>
-<div class="tip tip-en" style="display:none;"><h3>9. Take Action Anyway</h3><p>If you wait for "perfect conditions" you won't start. Start with no tools.</p></div>
-<div class="tip tip-en" style="display:none;"><h3>10. Trust Allah</h3><p>Work hard, make dua. The rest Allah will handle. Patience + Work = Success.</p></div>
-
-</div>
-
-<!-- Sabo: Next Project Section -->
-<div class="project">
-<h2>🚀 Project Na Gaba</h2>
-<p><b>Hausa:</b> Yanzu na fara da wannan website. Project na gaba shine in gina <b>Facebook na Hausawa</b> - social media da zai taimaka wa matasan arewa su sadar, su koyi, su samu damar kasuwanci. Ku bi ni don ku zama na farko da za ku koyi yadda za mu gina shi tare.</p>
-<p style="margin-top:10px"><b>English:</b> I started with this website. My next project is building a <b>Facebook for Hausa people</b> - a social platform to connect, learn, and do business. Follow me to be the first to learn how we'll build it together.</p>
-</div>
-
-<script>
-function toggleTips(){
-let tips = document.getElementById("tips");
-let teaser = document.getElementById("teaser");
-if(tips.style.display === "none"){
-tips.style.display = "block";
-teaser.style.display = "none";
-}else{
-tips.style.display = "none";
-teaser.style.display = "block";
-}
-}
-
-function changeLang(lang){
-let ha = document.querySelectorAll('.tip-ha');
-let en = document.querySelectorAll('.tip-en');
-let btns = document.querySelectorAll('.lang-btn');
-
-btns.forEach(b=>b.classList.remove('active'));
-event.target.classList.add('active');
-
-if(lang=='ha'){
-ha.forEach(e=>e.style.display='block');
-en.forEach(e=>e.style.display='none');
-}else{
-ha.forEach(e=>e.style.display='none');
-en.forEach(e=>e.style.display='block');
-}
-}
-
-// Sabo: Share sau ɗaya kawai
-function shareAll(){
-let url = window.location.href;
-let message = "Duba kyawawan shawarwari 10 masu zafi ga matasan ADUSTECH nan: " + url;
-window.open("https://wa.me/?text=" + encodeURIComponent(message), "_blank");
-}
-</script>
-
-</body>
-</html>
+<div class="share-top" onclick="
