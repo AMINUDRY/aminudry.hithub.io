@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AminunMatasa | Ga Matasan ADUSTECH</title>
+<meta name="description" content="Shawarwari ga matasan Aliko Dangote University Wudil - Hausa & English">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',sans-serif;background:#0f172a;color:#e2e8f0;line-height:1.7}
+.container{max-width:700px;margin:0 auto;padding:40px 20px}
+.hero-section{text-align:center;margin-bottom:50px}
+.profile-pic{width:150px;height:150px;border-radius:50%;border:4px solid #3b82f6;object-fit:cover;box-shadow:0 10px 30px rgba(59,130,246,0.4);margin-bottom:20px}
+h1{font-size:36px;color:#fff;margin-bottom:10px;font-weight:700}
+.subtitle{color:#94a3b8;font-size:18px;margin-bottom:5px}
+.bio{background:linear-gradient(135deg,#1e293b 0%,#334155 100%);padding:25px;border-radius:16px;margin:30px 0;border-left:4px solid #3b82f6}
+.bio h2{color:#3b82f6;margin-bottom:15px;font-size:22px}
+.counter{display:inline-block;background:#ef4444;color:white;padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600;margin-bottom:20px}
+.section{margin:40px 0}
+.section h2{color:#3b82f6;font-size:26px;margin-bottom:20px;text-align:center}
+.tip-card{background:#1e293b;padding:20px;border-radius:14px;margin:15px 0;border:1px solid #334155;transition:transform 0.3s}
+.tip-card:hover{transform:translateY(-5px);border-color:#3b82f6}
+.tip-card h3{color:#60a5fa;margin-bottom:8px;font-size:18px}
+.btn{width:100%;padding:18px;background:linear-gradient(135deg,#3b82f6 0%,#8b5cf6 100%);color:white;border:none;border-radius:12px;font-size:18px;font-weight:600;cursor:pointer;margin-top:15px;transition:all 0.3s}
+.btn:hover{transform:scale(1.02);box-shadow:0 10px 25px rgba(59,130,246,0.4)}
+.channel-btn{background:linear-gradient(135deg,#25D366 0%,#128C7E 100%)}
+.footer{text-align:center;margin-top:50px;padding-top:30px;border-top:1px solid #334155;color:#64748b;font-size:14px}
+.lang-switch{text-align:center;margin:15px 0}
+.lang-btn{background:#334155;border:none;color:#cbd5e1;padding:8px 15px;border-radius:8px;cursor:pointer;margin:0 5px;font-size:14px}
+.lang-btn.active{background:#3b82f6;color:white}
+.lang-en{display:none}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- HERO / KAI -->
+<div class="hero-section">
+<div class="counter">👥 Mutane <span id="count">0</span>+ sun ziyarta</div>
+<img src="aminu.jpg" class="profile-pic" alt="Aminu" onerror="this.src='https://ui-avatars.com/api/?name=Aminu+ADUSTECH&background=3b82f6&color=fff&size=150'">
+<h1>Aminu - ADUSTECH Wudil</h1>
+<p class="subtitle">Developer | Entrepreneur | Matashi Mai Neman Canji</p>
+</div>
+
+<!-- BIO -->
+<div class="bio">
+<h2>👋 Game Da Ni / About Me</h2>
+<p><b>Hausa:</b> Sunana Aminu. Ni dalibin Aliko Dangote University of Science and Technology Wudil ne. Na fara daga ₦0. Manufata ita ce in taimaki matasan ADUSTECH su koyi fasahar zamani su samu kudi da ilimi tare.</p>
+<p style="margin-top:12px"><b>English:</b> I'm Aminu, a student at Aliko Dangote University of Science and Technology Wudil. I started from ₦0. My mission is to help ADUSTECH students learn tech skills and earn while learning.</p>
+</div>
+
+<!-- MAIMAKON DAMAR KUDI → PROJECT -->
+<div class="section">
+<h2>🚀 Project Na Gaba</h2>
+<p style="text-align:center;font-size:18px;margin-bottom:20px;color:#cbd5e1">
+<b>Hausa:</b> Na fara da wannan website. Project na gaba shine gina <b>Facebook na Hausawa</b> - social media da zai taimaka wa matasan arewa su sadar, su koyi, su samu damar kasuwanci.<br><br>
+<b>English:</b> I started with this website. My next project is building a <b>Facebook for Hausa people</b> - a social platform to connect, learn, and do business.
+</p>
+<button class="btn" onclick="scrollToTips()">Duba Shawarwarina ↓ / View My Tips ↓</button>
+</div>
+
+<!-- SHAWARWARI BILINGUAL -->
+<div class="section" id="tips">
+<h2>💡 Shawarwari Ga Matasan ADUSTECH</h2>
+<p class="lang-switch">
+<button class="lang-btn active" onclick="switchLang('ha')">Hausa</button>
+<button class="lang-btn" onclick="switchLang('en')">English</button>
+</p>
+
+<div class="tip-card lang-ha">
+<h3>1. Koyi Skill Daya Yadda Ya Kamata</h3>
+<p>Kar ka bi kowane trend. Zabi coding, graphics, video editing, ko writing. Koyi shi har ƙarshe. Skill daya mai daraja ya fi skills 10 mara amfani.</p>
+</div>
+<div class="tip-card lang-en">
+<h3>1. Master One Skill First</h3>
+<p>Don't chase every trend. Pick coding, graphics, video editing, or writing. Master it completely. One valuable skill beats 10 useless ones.</p>
+</div>
+
+<div class="tip-card lang-ha">
+<h3>2. Fara Da Abin Da Kake Da Shi</h3>
+<p>Ba dole sai laptop mai ₦500k ba. Wayarka ta isa ka fara. YouTube + Google su ne malamanka. Fara yanzu, gyara daga baya.</p>
+</div>
+<div class="tip-card lang-en">
+<h3>2. Start With What You Have</h3>
+<p>You don't need a ₦500k laptop. Your phone is enough to start. YouTube + Google are your teachers. Start now, upgrade later.</p>
+</div>
+
+<div class="tip-card lang-ha">
+<h3>3. Gina Network, Ba Kudi Kawai Ba</h3>
+<p>Abokanka na ADUSTECH su ne dukiyarka. Taimaka musu, koyar da su. Da gobe za ku gina kamfani tare. Network > Money.</p>
+</div>
+<div class="tip-card lang-en">
+<h3>3. Build Network, Not Just Money</h3>
+<p>Your ADUSTECH friends are your wealth. Help them, teach them. Tomorrow you'll build a company together. Network > Money.</p>
+</div>
+</div>
+
+<!-- CALL TO ACTION -->
+<div class="section">
+<h2>📢 Bari Mu Yi Aiki Tare</h2>
+<p style="text-align:center;margin-bottom:20px">Shiga channel na don samun sabbin dabaru, tutorials, da damar kasuwanci kowace rana.</p>
+<button class="btn channel-btn" onclick="window.open('https://whatsapp.com/channel/0029VbDCxWLK0IBjIYWkcR23','_blank')">
+💬 Shiga AminunMatasa Channel
+</button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<p>Built with ❤️ by Aminu for ADUSTECH Students</p>
+<p>Project 1: Wannan Website | Project 2: Facebook na Hausawa - Coming Soon</p>
+</div>
+
+</div>
+
+<script>
+// Counter
+let visits = localStorage.getItem('visits') || 0;
+visits = parseInt(visits) + 1;
+localStorage.setItem('visits', visits);
+document.getElementById('count').textContent = visits;
+
+// Scroll to tips
+function scrollToTips(){
+document.getElementById('tips').scrollIntoView({behavior:'smooth'});
+}
+
+// Language switch
+function switchLang(lang){
+document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+event.target.classList.add('active');
+
+if(lang=='ha'){
+document.querySelectorAll('.lang-ha').forEach(e=>e.style.display='block');
+document.querySelectorAll('.lang-en').forEach(e=>e.style.display='none');
+}else{
+document.querySelectorAll('.lang-ha').forEach(e=>e.style.display='none');
+document.querySelectorAll('.lang-en').forEach(e=>e.style.display='block');
+}
+</script>
+
+</body>
+</html>
